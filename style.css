@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+ cornflowerblue,
+  mediumslateblue 
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+h1 {
+    color: darkslategray;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+   color: dimgray;
+
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid lightgray;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color:cornflowerblue ;
+}
+
+.search-box button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: cornflowerblue;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #5568d9;
+}
+
+.weather-card {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #f5f5f5;
+
+    border-radius: 15px;
+}
+
+.weather-card h2 {
+    color: #333;
+
+    margin-bottom: 25px;
+}
+
+.weather-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.weather-item {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.weather-item span {
+    font-size: 30px;
+}
+
+.weather-item h3 {
+    margin: 10px 0;
+
+    font-size: 15px;
+
+color: dimgray;
+
+}
+
+.weather-item p {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: darklategray;
+}
+
+.loading {
+    display: none;
+
+    color: cornflowerblue;
+;
+
+    margin: 15px;
+}
+
+.error {
+  color: crimson;
+
+    margin: 15px;
+
+    font-weight: bold;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 25px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .weather-info {
+        grid-template-columns: 1fr;
+    }
+}
